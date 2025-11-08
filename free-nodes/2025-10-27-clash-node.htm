@@ -272,31 +272,6 @@ A：目前尚无完全免费且支持 V2ray 的稳定客户端。出于审查与
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>何为 multiplex (mux)，启用后会有哪些利弊？</h5></div>
-    <div class="panel-body">
-        mux 是多路复用技术，可在单一连接上传输多路流量，从而减少握手次数与连接开销。优点是提升短连接并发效率，缺点是在丢包或单连接异常时可能影响多条会话并增加调试复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否兼容 Clash 配置文件？</h5></div>
-    <div class="panel-body">
-        部分兼容。Sing-box 支持从 Clash 订阅转换工具导入节点，但配置语法略有不同。建议使用第三方订阅转换器，如 sub-converter，将 Clash 格式转换为 Sing-box JSON 格式使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的订阅更新机制如何运作？</h5></div>
-    <div class="panel-body">
-        Nekoray 可以通过远程订阅 URL 自动下载最新节点和规则文件。用户可以设置更新频率，程序会定时检测并替换旧节点，保持配置最新状态。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
-    <div class="panel-body">
-        QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的证书配置错误会导致什么问题？</h5></div>
-    <div class="panel-body">
-        如果 TLS 证书无效或域名不匹配，Trojan 客户端将无法建立安全连接，导致节点无法使用。需要确保证书有效、域名正确，才能保证正常访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 可以与其他代理客户端共存吗？</h5></div>
     <div class="panel-body">
         可以。Nekobox 与 Shadowsocks、Clash 等客户端互不干扰，可以同时运行。用户可通过策略组或分流规则选择使用节点，实现灵活的网络管理。<hr />    </div>
@@ -305,6 +280,11 @@ A：目前尚无完全免费且支持 V2ray 的稳定客户端。出于审查与
     <div class="panel-heading"><h5>VMess 与 Shadowsocks 哪个更安全？</h5></div>
     <div class="panel-body">
         VMess 使用动态认证机制，防止重放攻击，而 Shadowsocks 依赖静态密钥。总体来说，VMess 的安全性更强，尤其在应对 DPI 检测和中间人攻击时表现更优。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 是否兼容 Clash 配置文件？</h5></div>
+    <div class="panel-body">
+        部分兼容。Sing-box 支持从 Clash 订阅转换工具导入节点，但配置语法略有不同。建议使用第三方订阅转换器，如 sub-converter，将 Clash 格式转换为 Sing-box JSON 格式使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 如何通过配置实现多出口分流？</h5></div>
@@ -317,9 +297,29 @@ A：目前尚无完全免费且支持 V2ray 的稳定客户端。出于审查与
         两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的分流规则如何支持视频加速？</h5></div>
     <div class="panel-body">
-        通过分流规则，将流媒体域名匹配到高速节点，其他网站走普通节点。这样可以保证视频播放流畅，同时节约带宽资源，提高整体网络效率和体验。    </div>
+        通过分流规则，将流媒体域名匹配到高速节点，其他网站走普通节点。这样可以保证视频播放流畅，同时节约带宽资源，提高整体网络效率和体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>何为 multiplex (mux)，启用后会有哪些利弊？</h5></div>
+    <div class="panel-body">
+        mux 是多路复用技术，可在单一连接上传输多路流量，从而减少握手次数与连接开销。优点是提升短连接并发效率，缺点是在丢包或单连接异常时可能影响多条会话并增加调试复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的证书配置错误会导致什么问题？</h5></div>
+    <div class="panel-body">
+        如果 TLS 证书无效或域名不匹配，Trojan 客户端将无法建立安全连接，导致节点无法使用。需要确保证书有效、域名正确，才能保证正常访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的订阅更新机制如何运作？</h5></div>
+    <div class="panel-body">
+        Nekoray 可以通过远程订阅 URL 自动下载最新节点和规则文件。用户可以设置更新频率，程序会定时检测并替换旧节点，保持配置最新状态。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -348,16 +348,16 @@ A：目前尚无完全免费且支持 V2ray 的稳定客户端。出于审查与
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-1-clash-node-daily-updates.htm" title="VPN在线 | 11月1日22.7M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 11月1日22.7M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-22-clash-v2ray-ss-ssr.htm" title="VPN在线 | 10月22日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月22日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-20-free-node-subscribe.htm" title="VPN在线 | 10月20日20.9M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月20日20.9M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-3-clash-verge-rev-windows.htm" title="VPN在线 | 10月3日21.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月3日21.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-18-clash-verge-rev-github.htm" title="VPN在线 | 10月18日19.4M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月18日19.4M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-clash-verge-rev-node-github.htm" title="VPN在线 | 11月7日20.8M/S|免费V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 11月7日20.8M/S|免费V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-clash-node.htm" title="VPN在线 | 10月8日18.7M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月8日18.7M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-13-clash-verge-rev-nodes.htm" title="VPN在线 | 10月13日22M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月13日22M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-19-clash-verge-rev-nodes.htm" title="VPN在线 | 10月19日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月19日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-clash-stash-node.htm" title="VPN在线 | 11月6日19.1M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 11月6日19.1M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-4-clash-v2ray-ss-ssr.htm" title="VPN在线 | 10月4日22.6M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月4日22.6M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-clash-node-daily-updates.htm" title="VPN在线 | 11月2日20.3M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 11月2日20.3M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-clash-verge-rev-node-github.htm" title="VPN在线 | 10月21日18.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月21日18.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-26-clash-verge-rev-node.htm" title="VPN在线 | 10月26日18.1M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月26日18.1M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-free-node-subscribe.htm" title="VPN在线 | 10月17日22.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月17日22.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-16-clash-verge-rev-node.htm" title="VPN在线 | 10月16日20.6M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月16日20.6M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-22-clash-v2ray-ss-ssr.htm" title="VPN在线 | 10月22日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月22日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-6-node-share.htm" title="VPN在线 | 10月6日18.3M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月6日18.3M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-10-clash-stash.htm" title="VPN在线 | 10月10日18.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月10日18.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -369,7 +369,7 @@ A：目前尚无完全免费且支持 V2ray 的稳定客户端。出于审查与
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
