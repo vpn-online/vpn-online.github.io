@@ -331,29 +331,9 @@ A4：需要iOS系统版本符合官方要求，建议使用较新设备以保证
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
-    <div class="panel-body">
-        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何通过策略组优化多应用分流？</h5></div>
     <div class="panel-body">
         QuantumultX 可以根据应用类型、端口和协议设置策略组，自动选择最优节点处理不同流量。这样可保证网页浏览、视频播放和游戏访问顺畅，提高整体网络效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Clash Premium 中使用 TUN 模式加速游戏？</h5></div>
-    <div class="panel-body">
-        Clash Premium 版本支持系统级 TUN 模式，可将所有 UDP 流量转发至代理节点。启用该模式后需管理员权限，并在配置文件中添加 dns 与 tun 模块，选择低延迟节点即可实现游戏加速。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何防止规则文件冲突导致分流异常？</h5></div>
-    <div class="panel-body">
-        合理组织规则顺序，将更具体的规则放在前面，通配规则放在末尾；使用 rule-providers 分离不同来源的规则，避免重复条目，并在变更后使用日志或 debug 模式检验分流是否按预期生效。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何按 IP 段实现智能分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持根据 IP 段匹配流量，将国内流量直连、国外流量走代理。结合策略组和规则文件，实现精细化流量管理，保证访问速度和稳定性，同时提高节点使用效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的策略组可按 IP 段分流吗？</h5></div>
@@ -366,9 +346,24 @@ A4：需要iOS系统版本符合官方要求，建议使用较新设备以保证
         支持。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。用户可通过策略组灵活管理节点，实现多客户端分流和网络优化，提高使用便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 Clash Premium 中使用 TUN 模式加速游戏？</h5></div>
+    <div class="panel-body">
+        Clash Premium 版本支持系统级 TUN 模式，可将所有 UDP 流量转发至代理节点。启用该模式后需管理员权限，并在配置文件中添加 dns 与 tun 模块，选择低延迟节点即可实现游戏加速。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 的安全性是否优于 Shadowsocks？</h5></div>
     <div class="panel-body">
         VMess 拥有动态验证机制和更复杂的握手协议，相较于静态密钥的 Shadowsocks 安全性更高。它能有效抵御重放攻击和 DPI 检测，更适合长期使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何防止规则文件冲突导致分流异常？</h5></div>
+    <div class="panel-body">
+        合理组织规则顺序，将更具体的规则放在前面，通配规则放在末尾；使用 rule-providers 分离不同来源的规则，避免重复条目，并在变更后使用日志或 debug 模式检验分流是否按预期生效。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
+    <div class="panel-body">
+        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
@@ -376,9 +371,14 @@ A4：需要iOS系统版本符合官方要求，建议使用较新设备以保证
         支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
+    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
     <div class="panel-body">
-        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。    </div>
+        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何按 IP 段实现智能分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持根据 IP 段匹配流量，将国内流量直连、国外流量走代理。结合策略组和规则文件，实现精细化流量管理，保证访问速度和稳定性，同时提高节点使用效率。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -426,16 +426,16 @@ A4：需要iOS系统版本符合官方要求，建议使用较新设备以保证
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-25.htm" title="VPN在线 | 9月25日23M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月25日23M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-clash-verge-rev-node-share.htm" title="VPN在线 | 8月10日19.3M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 8月10日19.3M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-9-13.htm" title="VPN在线 | 9月13日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月13日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-clash-verge-rev-nodes.htm" title="VPN在线 | 9月22日21.1M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月22日21.1M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-verge-rev-node-github.htm" title="VPN在线 | 9月4日18.6M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月4日18.6M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-10-clash-node.htm" title="VPN在线 | 9月10日21.6M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月10日21.6M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-clash-verge-rev-node-share.htm" title="VPN在线 | 8月12日18.6M/S|免费Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 8月12日18.6M/S|免费Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-27.htm" title="VPN在线 | 8月27日19.8M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 8月27日19.8M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-8-19.htm" title="VPN在线 | 8月19日18.6M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 8月19日18.6M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-29.htm" title="VPN在线 | 9月29日18.4M/S|免费Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月29日18.4M/S|免费Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-9-23.htm" title="VPN在线 | 9月23日19.2M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月23日19.2M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-21.htm" title="VPN在线 | 9月21日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月21日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-17.htm" title="VPN在线 | 9月17日20.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月17日20.6M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-7.htm" title="VPN在线 | 9月7日20.8M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月7日20.8M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-9-13.htm" title="VPN在线 | 9月13日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月13日23M/S|免费Clash节点/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-4-clash-verge-rev-node-share.htm" title="VPN在线 | 10月4日19.9M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月4日19.9M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-node-subscribe.htm" title="VPN在线 | 9月14日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月14日22.5M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-clash-verge-rev-node-github.htm" title="VPN在线 | 9月12日18.2M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月12日18.2M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-verge-rev-node-github.htm" title="VPN在线 | 9月4日18.6M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月4日18.6M/S|免费Shadowrocket节点/Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -447,10 +447,10 @@ A4：需要iOS系统版本符合官方要求，建议使用较新设备以保证
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                     </ul>
     </div>
