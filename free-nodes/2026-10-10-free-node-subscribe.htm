@@ -369,14 +369,9 @@ opkg install luci-app-passwall
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
     <div class="panel-body">
-        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何把 Clash 规则与本地 hosts 文件结合使用？</h5></div>
-    <div class="panel-body">
-        可在 Clash 的 rules 中优先设置域名直连规则，并在系统 hosts 中添加常用站点的固定解析以加速 DNS 解析。注意 hosts 优先级高于 DNS，因此修改 hosts 需谨慎以避免与真实解析冲突。<hr />    </div>
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
@@ -394,14 +389,14 @@ opkg install luci-app-passwall
         Matsuri 会测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理视频流量。减少缓冲和卡顿，保证在线视频播放顺畅，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
+    <div class="panel-body">
+        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 相比 Clash Premium 有哪些改进？</h5></div>
     <div class="panel-body">
         Mihomo 作为 Clash Premium 的开源替代品，移除了闭源依赖并优化了内存管理。它支持更多自定义规则和插件扩展，对开发者更友好，同时保持与 Clash 配置完全兼容。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 能运行在哪些设备上？</h5></div>
-    <div class="panel-body">
-        PassWall2 是基于 OpenWRT 的插件，只要路由器支持该固件，就能安装运行。常见型号如小米路由、斐讯、软路由都可以使用，通过 Web 界面操作，适合家庭网络使用场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 Routing 设置可以实现什么？</h5></div>
@@ -409,14 +404,19 @@ opkg install luci-app-passwall
         V2Ray 的 Routing 系统支持基于域名、IP、端口或协议的智能分流。用户可以指定特定网站直连、部分服务走代理，还能创建黑白名单，实现灵活的网络访问控制。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
+    <div class="panel-heading"><h5>如何把 Clash 规则与本地 hosts 文件结合使用？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
+        可在 Clash 的 rules 中优先设置域名直连规则，并在系统 hosts 中添加常用站点的固定解析以加速 DNS 解析。注意 hosts 优先级高于 DNS，因此修改 hosts 需谨慎以避免与真实解析冲突。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
     <div class="panel-body">
-        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。    </div>
+        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 能运行在哪些设备上？</h5></div>
+    <div class="panel-body">
+        PassWall2 是基于 OpenWRT 的插件，只要路由器支持该固件，就能安装运行。常见型号如小米路由、斐讯、软路由都可以使用，通过 Web 界面操作，适合家庭网络使用场景。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -464,16 +464,16 @@ opkg install luci-app-passwall
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-10-1.htm" title="VPN在线 | 10月1日22M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月1日22M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-20-clash-verge-rev-nodes.htm" title="VPN在线 | 9月20日21M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月20日21M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-16-clash-stash-node.htm" title="VPN在线 | 9月16日23M/S|免费SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月16日23M/S|免费SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-24-clash-verge-rev-nodes.htm" title="VPN在线 | 9月24日19M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月24日19M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-14-free-node-subscribe.htm" title="VPN在线 | 10月14日20.3M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月14日20.3M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-8-clash-verge-rev-node-github.htm" title="VPN在线 | 9月8日19.1M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月8日19.1M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-29.htm" title="VPN在线 | 9月29日18.4M/S|免费Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月29日18.4M/S|免费Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-15.htm" title="VPN在线 | 9月15日20.9M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月15日20.9M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-20-clash-verge-rev-node-github.htm" title="VPN在线 | 10月20日19.4M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月20日19.4M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-clash-node.htm" title="VPN在线 | 9月30日19.6M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月30日19.6M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-10-4-clash-verge-rev-node-share.htm" title="VPN在线 | 10月4日19.9M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月4日19.9M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-6-clash-node.htm" title="VPN在线 | 9月6日20.8M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月6日20.8M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-9-21.htm" title="VPN在线 | 9月21日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月21日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-9-11.htm" title="VPN在线 | 9月11日19.4M/S|免费V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 9月11日19.4M/S|免费V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-10-3.htm" title="VPN在线 | 10月3日20.7M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月3日20.7M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-10-15.htm" title="VPN在线 | 10月15日20.5M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月15日20.5M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-10-5.htm" title="VPN在线 | 10月5日22.7M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月5日22.7M/S|免费Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-2-free-node-subscribe.htm" title="VPN在线 | 10月2日20M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐">VPN在线 | 10月2日20M/S|免费SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，在线VPN机场梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -485,7 +485,7 @@ opkg install luci-app-passwall
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
